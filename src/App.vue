@@ -1,5 +1,7 @@
 <template>
-  <div class="text-2xl text-red-700">Main page</div>
+  <div class="max-w-5xl mx-auto p-4">
+    <router-view />
+  </div>
 </template>
 
 <script>

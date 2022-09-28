@@ -1,5 +1,16 @@
 import { createApp } from "vue";
-import "./style.css";
+import router from "./router.js";
+import store from "./store";
 import App from "./App.vue";
+import "./axios";
+import "./style.css";
+import { maska } from "maska";
 
-createApp(App).mount("#app");
+const app = createApp(App);
+
+app.use(router);
+app.use(store);
+
+app.directive("maska", maska);
+
+app.mount("#app");
