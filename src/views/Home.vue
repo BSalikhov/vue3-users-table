@@ -130,7 +130,10 @@ export default {
   },
 
   created() {
-    if (!JSON.parse(localStorage.getItem("users")).length) {
+    if (
+      !localStorage.getItem("users") ||
+      !JSON.parse(localStorage.getItem("users")).length
+    ) {
       this.fetchUsers();
     }
   },
